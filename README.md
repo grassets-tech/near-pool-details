@@ -115,5 +115,5 @@ yarn deploy
 
 
 ## Join Us
-Mainnet: [grassets.poolv1.near](https://explorer.near.org/accounts/grassets.poolv1.near)
-Testnet: [grassets.pool.f863973.m0](https://explorer.testnet.near.org/accounts/grassets.pool.f863973.m0)
+ - Mainnet: [grassets.poolv1.near](https://explorer.near.org/accounts/grassets.poolv1.near)
+ - Testnet: [grassets.pool.f863973.m0](https://explorer.testnet.near.org/accounts/grassets.pool.f863973.m0)
