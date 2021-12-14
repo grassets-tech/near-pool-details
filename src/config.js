@@ -1,4 +1,4 @@
-const CONTRACT_NAME = process.env.CONTRACT_NAME || 'pool-details.name.near'; /* TODO: change this to your account */
+const CONTRACT_NAME = process.env.CONTRACT_NAME || 'validator-info.testnet'; /* TODO: change this to your account */
 
 function getConfig (env) {
   switch (env) {
@@ -14,7 +14,7 @@ function getConfig (env) {
     case 'development':
     case 'testnet':
       return {
-        networkId: 'default',
+        networkId: 'testnet',
         nodeUrl: 'https://rpc.testnet.near.org',
         contractName: CONTRACT_NAME,
         walletUrl: 'https://wallet.testnet.near.org',
