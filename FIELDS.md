@@ -1,7 +1,6 @@
 Set of suggested fields for `update_field` method:
 
 - description
-- logo
 - name
 - country_code *
 - url (full with http:// or https://)
