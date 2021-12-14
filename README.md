@@ -1,17 +1,13 @@
-NEAR Staking Pool Details
+NEAR Staking Pool Details (validator info)
 =================================
-
-[![Open in Gitpod!](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/zavodil/near-pool-details)
 
 <!-- MAGIC COMMENT: DO NOT DELETE! Everything above this line is hidden on NEAR Examples page -->
 
 ## Description
 
-Add details about your whitelisted staking pool on NEAR blockchain.
+Add details about your whitelisted staking pool (validator info) on NEAR blockchain.
 
-Current contract address in NEAR Mainnet: [`name.near`](https://explorer.near.org/accounts/name.near) 
-
-Check output: [near.zavodil.ru/?pools](https://near.zavodil.ru/?pools)
+Current contract address in NEAR Testnet: [`validator-info.testnet`](https://explorer.testnet.near.org/accounts/validator-info.testnet) 
 
 ## Available methods
 
@@ -116,3 +112,8 @@ yarn deploy
 ## To Explore
 
 - `contract/src/lib.rs` for the contract code
+
+
+## Join Us
+Mainnet: [grassets.poolv1.near](https://explorer.near.org/accounts/grassets.poolv1.near)
+Testnet: [grassets.pool.f863973.m0](https://explorer.testnet.near.org/accounts/grassets.pool.f863973.m0)
