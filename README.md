@@ -1,8 +1,6 @@
 NEAR Staking Pool Details (validator info)
 =================================
 
-<!-- MAGIC COMMENT: DO NOT DELETE! Everything above this line is hidden on NEAR Examples page -->
-
 ## Description
 
 Add details about your whitelisted staking pool (validator info) on NEAR blockchain.
