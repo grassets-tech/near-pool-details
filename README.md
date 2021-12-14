@@ -5,112 +5,45 @@ NEAR Staking Pool Details (validator info)
 
 Add details about your whitelisted staking pool (validator info) on NEAR blockchain.
 
-Current contract address in NEAR Testnet: [`validator-info.testnet`](https://explorer.testnet.near.org/accounts/validator-info.testnet) 
+Currently deployed on Near Testnet with contract address: [`validator-info.testnet`](https://explorer.testnet.near.org/accounts/validator-info.testnet) 
 
 ## Available methods
 
-- update_field '{"pool_id": "`<<YOUR_POOL>>`", "name": "`<<FIELD_NAME>>`", "value": "`<<VALUE>>`"}' --accountId=`<<YOUR_POOL_OWNER_ACCOUNT_ID>>` --gas=200000000000000
+- update_field '{"pool_id": "`<YOUR_POOL>`", "name": "`<INFO_FIELD_NAME>`", "value": "`<VALUE>`"}' --accountId=`<YOUR_POOL_OWNER_ACCOUNT_ID>` --gas=200000000000000
 
 Please find list of suggested field names in [FIELDS.md](https://github.com/zavodil/near-pool-details/blob/master/FIELDS.md) 
+
 - get_all_fields '{"from_index": 0, "limit": 100}'
-- get_fields_by_pool '{"pool_id": "`<<YOUR_POOL>>`"}' 
-- get_num_pools
+- get_fields_by_pool '{"pool_id": "`<YOUR_POOL>`"}' 
 
-## Examples
 
-```
-near call name.near update_field '{"pool_id": "zavodil.poolv1.near", "name": "url", "value": "https://zavodil.ru"}' --accountId=zavodil.near  --gas=200000000000000
-
-near call name.near update_field '{"pool_id": "zavodil.poolv1.near", "name": "twitter", "value": "zavodil_ru"}' --accountId=zavodil.near  --gas=200000000000000
-
-near view  name.near get_all_fields '{"from_index": 0, "limit": 3}'
-
-near view  name.near get_fields_by_pool '{"pool_id": "zavodil.poolv1.near"}' 
+## How to call
 
 ```
+near call validator-info.testnet update_field '{"pool_id": "grassets.pool.f863973.m0", "name": "website", "value": "https://grassets.tech"}' --accountId=grassets.testnet  --gas=200000000000000
 
-## To Run
-Open in the Gitpod link above or clone the repository.
+near call validator-info.testnet update_field '{"pool_id": "grassets.pool.f863973.m0", "name": "github", "value": "grassets-tech"}' --accountId=grassets.testnet  --gas=200000000000000
 
-```
-git clone https://github.com/zavodil/near-pool-details
-```
+near view  validator-info.testnet get_all_fields '{"from_index": 0, "limit": 3}'
 
-
-## Setup [Or skip to Login if in Gitpod](#login)
-Install dependencies:
+near view  validator-info.testnet get_fields_by_pool '{"pool_id": "grassets.pool.f863973.m0"}' 
 
 ```
-yarn
-```
 
-If you don't have `Rust` installed, complete the following 3 steps:
+## Before use, please install `near-cli`
 
-1) Install Rustup by running:
-
-```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-
-([Taken from official installation guide](https://www.rust-lang.org/tools/install))
-
-2) Configure your current shell by running:
-
-```
-source $HOME/.cargo/env
-```
-
-3) Add wasm target to your toolchain by running:
-
-```
-rustup target add wasm32-unknown-unknown
-```
-
-Next, make sure you have `near-cli` by running:
-
-```
-near --version
-```
-
-If you need to install `near-cli`:
+Use Near Bootcamp for detailed instructions https://bootcamp.openshards.io/#nearup-node
 
 ```
 npm install near-cli -g
 ```
 
 ## Login
-If you do not have a NEAR account, please create one with [NEAR Wallet](https://wallet.near.org).
-
-In the project root, login with `near-cli` by following the instructions after this command:
+You should have your private key stored in `.near-credentials/testnet/` to be able signing transactions
 
 ```
 near login
 ```
-
-Modify the top of `src/config.js`, changing the `CONTRACT_NAME` to be the NEAR account that was just used to log in.
-
-```javascript
-…
-const CONTRACT_NAME = 'YOUR_ACCOUNT_NAME_HERE'; /* TODO: fill this in! */
-…
-```
-
-Build
-
-```
-yarn build
-```
-
-Deploy
-
-```
-yarn deploy
-```
-
-## To Explore
-
-- `contract/src/lib.rs` for the contract code
-
 
 ## Join Us
  - Mainnet: [grassets.poolv1.near](https://explorer.near.org/accounts/grassets.poolv1.near)
